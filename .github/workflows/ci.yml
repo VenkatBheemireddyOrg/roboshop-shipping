@@ -1,0 +1,19 @@
+name: Shipping CICD
+run-name: Shipping CICD
+on: [push]
+jobs:
+  ci:
+    uses: VenkatBheemireddyOrg/github-reusable-actions/.github/workflows/ci.yml@main
+    with:
+      component: shipping
+      appType: maven
+
+  deploy:
+    needs: ci
+    uses: VenkatBheemireddyOrg/github-reusable-actions/.github/workflows/deploy.yml@main
+    with:
+      component: shipping
+
+
+
+

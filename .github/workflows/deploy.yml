@@ -1,8 +1,0 @@
-name: Shipping Deployment
-on: [push, workflow_dispatch]
-jobs:
-  deploy:
-    uses: VenkatBheemireddyOrg/github-reusable-actions/.github/workflows/ci.yml@main
-    with:
-      component: shipping     #with block is to pass parameter
-
