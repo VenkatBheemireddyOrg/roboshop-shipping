@@ -5,5 +5,3 @@ USER          roboshop
 WORKDIR       /home/roboshop
 COPY          app-user.sql master-data.sql schema.sql run.sh /home/roboshop/
 ENTRYPOINT    [ "bash", "run.sh" ]
-
-#
